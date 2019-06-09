@@ -1,0 +1,4 @@
+<!--pages/mine/mine.wxml-->
+<text>pages/mine/mine.wxml</text>
+<navigator url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab1</navigator>
+<navigator url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab2</navigator>

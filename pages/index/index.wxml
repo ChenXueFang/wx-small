@@ -1,0 +1,126 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+    <block wx:for="{{movies}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 三个按钮选项 -->
+  <view class='button'>
+    <button class='btn1 btn {{curIndex===0?"on":""}}' bindtap='tabqiehuan' data-index="0">#土味情话#</button>
+    <button class='btn2 btn {{curIndex===1?"on":""}}' bindtap='tabqiehuan' data-index="1">#一句话证明#</button>
+    <button class='btn3 btn {{curIndex===2?"on":""}}' bindtap='tabqiehuan' data-index="2">#填鸭#</button>
+  </view>
+  <!-- tab切换 -->
+  <block wx:if="{{curIndex===0}}" wx:for-items="{{talkItems0}}" wx:key="name">
+    <view class="talk-item" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+      <image class='talk-image' src='{{item.imageurl}}'></image>
+      <view class='talk_zi'>
+        <!-- 第一行字 -->
+        <view class='talk_top'>
+          <text class='talk_name'>{{item.name}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <!-- 第二行字 -->
+        <view class='talk_cen' space='nbsp'>{{item.words}}</view>
+        <!-- 第三行字 -->
+        <view class='talk_bom'>
+          <text>浏览422次</text>
+          <view space='nbsp'>
+            <image class='img1' src='../../img/chatread.png'></image> 8</view>
+          <view space='nbsp'>
+            <image bindtap='zanClick' class='img1' src='{{item.zanurl}}'></image> {{zanNum}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{curIndex===1}}" wx:for-items="{{talkItems1}}" wx:key="name">
+    <view class="talk-item" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+      <image class='talk-image' src='{{item.imageurl}}'></image>
+      <view class='talk_zi'>
+        <!-- 第一行字 -->
+        <view class='talk_top'>
+          <text class='talk_name'>{{item.name}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <!-- 第二行字 -->
+        <view class='talk_cen' space='nbsp'>{{item.words}}</view>
+        <!-- 第三行字 -->
+        <view class='talk_bom'>
+          <text>浏览422次</text>
+          <view space='nbsp'>
+            <image class='img1' src='../../img/chatread.png'></image> 8</view>
+          <view space='nbsp'>
+            <image bindtap='zanClick' class='img1' src='{{item.zanurl}}'></image> {{zanNum}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{curIndex===2}}" wx:for-items="{{talkItems2}}" wx:key="name">
+    <view class="talk-item" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+      <image class='talk-image' src='{{item.imageurl}}'></image>
+      <view class='talk_zi'>
+        <!-- 第一行字 -->
+        <view class='talk_top'>
+          <text class='talk_name'>{{item.name}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <!-- 第二行字 -->
+        <view class='talk_cen' space='nbsp'>{{item.words}}</view>
+        <!-- 第三行字 -->
+        <view class='talk_bom'>
+          <text>浏览422次</text>
+          <view space='nbsp'>
+            <image class='img1' src='../../img/chatread.png'></image> 8</view>
+          <view space='nbsp'>
+            <image bindtap='zanClick' class='img1' src='{{item.zanurl}}'></image> {{zanNum}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 一条 -->
+  <block wx:for-items="{{talkItems}}" wx:key="name">
+    <view class="talk-item" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+      <image class='talk-image' src='{{item.imageurl}}'></image>
+      <view class='talk_zi'>
+        <!-- 第一行字 -->
+        <view class='talk_top'>
+          <text class='talk_name'>{{item.name}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <!-- 第二行字 -->
+        <view class='talk_cen' space='nbsp'>{{item.words}}</view>
+        <!-- 第三行字 -->
+        <view class='talk_bom'>
+          <text>浏览422次</text>
+          <view space='nbsp'>
+            <image class='img1' src='../../img/chatread.png'></image> 8
+          </view>
+          <!-- <view space='nbsp'>
+            <image bindtap='zanClick' class='img1' src='{{item.zanurl}}'></image> {{key}}
+          </view> -->
+          <view class='box' style='display:flex;align-items: center'>
+            <block wx:for="{{stars}}">
+              <image class="img1" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+                <view class="item" data-key="{{item+1}}" bindtap="selectLeft"></view>
+              </image>
+            </block>
+            <view class='count'>{{key}}</view>
+          </view>
+          <!-- 第三行 -->
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 正在加载 -->
+  <view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+    <view class="weui-loadmore__tips">正在赶鸭~</view>
+  </view>
+
+
+
+
+</view>

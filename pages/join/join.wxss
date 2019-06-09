@@ -1,0 +1,11 @@
+/* pages/join/join.wxss */
+.container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+image{
+  width: 90%;
+  height: 240rpx;
+  margin: 20rpx;
+}

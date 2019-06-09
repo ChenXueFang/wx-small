@@ -1,0 +1,7 @@
+<!--pages/join/join.wxml-->
+<view class='container'>
+  <image src='../../img/lun1.png'></image>
+  <image src='../../img/lun2.png'></image>
+  <image src='../../img/lun3.png'></image>
+  <image src='../../img/lun4.png'></image>
+</view>

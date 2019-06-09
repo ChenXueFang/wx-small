@@ -1,0 +1,107 @@
+/**index.wxss**/
+.container{
+  background: #f6f6f6;
+}
+/* 轮播图 */
+.swiper {
+  height: 244rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+/* 三个按钮 */
+.button{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+}
+.button>button{
+  height: 80rpx;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+}
+.btn1{
+  color: #fba1bf;
+  border: 2rpx solid #fba1bf;
+  background: #fff;
+  border-radius: 60rpx;
+}
+.btn2{
+  color: #5890ed;
+  border: 2rpx solid #5890ed;
+  background: #fff;
+  border-radius: 60rpx;
+}
+.btn3{
+  color: #928eed;
+  border: 2rpx solid #928eed;
+  background: #fff;
+  border-radius: 60rpx;
+}
+/* 一条 */
+.talk-item{
+  width: 100%;
+  color: #9f9f9f;
+  padding: 30rpx;
+  margin-bottom: 15rpx;
+  background: #fff;
+  white-space: nowrap;/*规定段落中的文本不进行换行*/
+  overflow: hidden;/*超出的隐藏*/
+  text-overflow: ellipsis; /*被遮挡的文字出现省略点*/
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* 一条左边 */
+.talk-image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+/* 一条右边 */
+.talk_zi{
+  width: 80%;
+  margin-right: 30rpx;
+}
+.img1{
+  width: 30rpx;
+  height: 30rpx;
+}
+/* 右边第一行字 */
+.talk_top{
+  display: flex;
+  justify-content: space-between;
+}
+.talk_name{
+  color: #797979;
+}
+/* 右边第二行 */
+.talk_cen{
+  margin: 15rpx; 
+  color: #68c099;
+}
+/* 右边第三行 */
+.talk_bom{
+  display: flex;
+  justify-content: space-between;
+}
+/* tab切换*/
+.btn1.on{
+  color: #fff;
+  background: #fba1bf;
+}
+.btn2.on{
+  color: #fff;
+  background: #5890ed;
+}
+.btn3.on{
+  color: #fff;
+  background: #928eed;
+}
+
+

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/join/join",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "趣你鸭",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/index0.png",
+        "selectedIconPath": "img/index1.png"
+      },
+      {
+        "pagePath": "pages/join/join",
+        "text": "参与",
+        "iconPath": "img/test0.png",
+        "selectedIconPath": "img/test1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "img/myself0.png",
+        "selectedIconPath": "img/myself1.png"
+      }
+    ],
+    "color": "#999",
+    "selectedColor": "#5080ff"
+  }
+}
