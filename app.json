@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/join/join",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/biaobai/biaobai"
   ],
   "window": {
     "backgroundTextStyle": "dark",

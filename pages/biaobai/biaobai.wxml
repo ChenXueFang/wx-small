@@ -1,0 +1,5 @@
+<!--pages/biaobai/biaobai.wxml-->
+<view class='container'>
+  <image src='../../img/biaobai.png'></image>
+</view>
+

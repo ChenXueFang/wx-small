@@ -9,3 +9,8 @@ image{
   height: 240rpx;
   margin: 20rpx;
 }
+navigator{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

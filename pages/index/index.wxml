@@ -31,8 +31,9 @@
           <text>浏览422次</text>
           <view space='nbsp'>
             <image class='img1' src='../../img/chatread.png'></image> 8</view>
+          <!-- 点赞 -->
           <view space='nbsp'>
-            <image bindtap='zanClick' class='img1' src='{{item.zanurl}}'></image> {{zanNum}}</view>
+            <image class='img1' src='{{item.zanurl}}'></image> {{zanNum}}</view>
         </view>
       </view>
     </view>
@@ -99,16 +100,9 @@
           <view space='nbsp'>
             <image class='img1' src='../../img/chatread.png'></image> 8
           </view>
-          <!-- <view space='nbsp'>
-            <image bindtap='zanClick' class='img1' src='{{item.zanurl}}'></image> {{key}}
-          </view> -->
-          <view class='box' style='display:flex;align-items: center'>
-            <block wx:for="{{stars}}">
-              <image class="img1" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
-                <view class="item" data-key="{{item+1}}" bindtap="selectLeft"></view>
-              </image>
-            </block>
-            <view class='count'>{{key}}</view>
+          <!-- 第三行 -->
+          <view space='nbsp'>
+            <image class='img1' src='{{item.zanurl}}'></image> {{key}}
           </view>
           <!-- 第三行 -->
         </view>
